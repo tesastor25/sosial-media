@@ -26,7 +26,7 @@ pipeline {
        stage('kubernetes') {
             steps{
                 script {
-                  sh "kubectl  set image deployment/sosmed  sosmed=dana2cr/sosmedstag:${BUILD_NUMBER} -n production"
+                  sh "kubectl  set image deployment/sosmed  sosmed=dana2cr/sosmedstag:${BUILD_NUMBER} -n staging"
                 }
             }
         }
