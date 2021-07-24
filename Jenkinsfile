@@ -12,21 +12,21 @@ pipeline {
         stage('Building Image') {
             steps{
                 script {
-                  sh "docker build . -t dana2cr/sosmedprod:${BUILD_NUMBER}"
+                  sh "docker build . -t dana2cr/sosmedstag:${BUILD_NUMBER}"
                 }
             }
         }
        stage('Push Image') {
             steps{
                 script {
-                  sh "docker push dana2cr/sosmedprod:${BUILD_NUMBER}"
+                  sh "docker push dana2cr/sosmedstag:${BUILD_NUMBER}"
                 }
             }
         }
        stage('kubernetes') {
             steps{
                 script {
-                  sh "kubectl  set image deployment/sosmed  landing=dana2cr/sosmedprod:${BUILD_NUMBER} -n production"
+                  sh "kubectl  set image deployment/sosmed  sosmed=dana2cr/sosmedstag:${BUILD_NUMBER} -n production"
                 }
             }
         }
