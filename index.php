@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1>Selamat datang di Pesbuk Dana</h1>
+                        <h1>Selamat datang di Pesbuk Dana STAGING!</h1>
                         <p>Bergabunglah bersama Perusahaan Saya...</p>
                     </div>
                     <div class="col-md-4">
